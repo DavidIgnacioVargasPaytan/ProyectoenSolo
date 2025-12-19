@@ -1,27 +1,50 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    const header = document.querySelector('header');
-    let lastScroll = 0;
-    
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > lastScroll && currentScroll > 100) {
-            header.style.transform = 'translateY(-100%)';
-        } else {
-            header.style.transform = 'translateY(0)';
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const body = document.body;
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            sidebar.classList.toggle('active');
+            
+            if (sidebar.classList.contains('active')) {
+                menuToggle.textContent = '✕';
+                menuToggle.style.color = '#ff5252';
+            } else {
+                menuToggle.textContent = '☰';
+                menuToggle.style.color = 'var(--gold)';
+            }
+        });
+    }
+
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 900) {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+                sidebar.classList.remove('active');
+                menuToggle.textContent = '☰';
+                menuToggle.style.color = 'var(--gold)';
+            }
         }
-        
-        lastScroll = currentScroll;
     });
 
-    header.style.transition = 'transform 0.3s ease';
-    
+    const currentPath = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        
+        if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+
     const sections = document.querySelectorAll('section');
     
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+        rootMargin: '0px 0px -50px 0px'
     };
     
     const sectionObserver = new IntersectionObserver(function(entries) {
@@ -39,57 +62,20 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         sectionObserver.observe(section);
     });
-    
-    const images = document.querySelectorAll('figure img');
-    images.forEach(img => {
-        img.addEventListener('click', function() {
-            this.style.transform = 'scale(1.1)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 300);
-        });
-    });
-    
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-    
+
     const tableRows = document.querySelectorAll('tbody tr');
     tableRows.forEach(row => {
         row.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.02)';
-            this.style.transition = 'transform 0.2s ease';
+            this.style.transform = 'scale(1.01)';
+            this.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+            this.style.transition = 'all 0.2s ease';
         });
         
         row.addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1)';
+            this.style.backgroundColor = 'transparent';
         });
     });
-    
-    const detailsElements = document.querySelectorAll('details');
-    detailsElements.forEach(details => {
-        details.addEventListener('toggle', function() {
-            if (this.open) {
-                this.querySelector('summary').style.color = 'var(--primary-red)';
-            } else {
-                this.querySelector('summary').style.color = 'var(--gold)';
-            }
-        });
-    });
-    
-    console.log('%c⚔️ God of War Portal Cargado ⚔️', 'color: #d4af37; font-size: 20px; font-weight: bold;');
-    console.log('%c¡Bienvenido, Guerrero Espartano!', 'color: #cc0000; font-size: 14px;');
+
+    console.log('%cGod of War Portal V2', 'color: #d4af37; font-size: 20px; font-weight: bold;');
 });

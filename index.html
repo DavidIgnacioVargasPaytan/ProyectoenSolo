@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cronología God of War - Portal Completo</title>
+    <title>God of War - El Portal Definitivo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -11,138 +11,122 @@
 </head>
 <body>
     
-    <header>
-        <h1>⚔️ Cronología God of War ⚔️</h1>
-        
-        <nav>
-            <details open>
-                <summary>📜 Navegación Principal</summary>
-                <ul>
-                    <li><a href="index.html">🏠 Inicio</a></li>
-                    <li><a href="arsenal.html">⚔️ Arsenal</a></li>
-                    <li><a href="personajes.html">👥 Personajes</a></li>
-                    <li><a href="bosses.html">💀 Bosses Épicos</a></li>
-                    <li><a href="soundtracks.html">🎵 Banda Sonora</a></li>
-                    <li><a href="galeria.html">🖼️ Galería</a></li>
-                    <li><a href="registro_gow.html">👤 Registro</a></li>
-                    <li><a href="noticias.html">📰 Noticias</a></li>
-                    <li><a href="https://www.playstation.com/es-pe/god-of-war/" target="_blank">🎮 Adquiere los Juegos</a></li>
-                </ul>
-            </details>
-        </nav>
-    </header>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">☰</button>
 
-    <main>
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-brand">
+            <div class="omega-icon">Ω</div>
+            <h2>GOD OF WAR</h2>
+        </div>
         
-        <section>
-            <h2>📖 Sobre God of War</h2>
-            <p>God of War es una de las franquicias más icónicas de PlayStation, desarrollada por Santa Monica Studio. La saga nos cuenta la historia de Kratos, un guerrero espartano que se convierte en el Dios de la Guerra.</p>
-            <p>La serie ha evolucionado desde sus raíces en la mitología griega hasta explorar el rico mundo de la mitología nórdica, ofreciendo una experiencia épica de acción y aventura que ha cautivado a millones de jugadores en todo el mundo.</p>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">🏠 Inicio</a></li>
+            <li><a href="arsenal.html">⚔️ Arsenal</a></li>
+            <li><a href="personajes.html">👥 Personajes</a></li>
+            <li><a href="bosses.html">💀 Bosses Épicos</a></li>
+            <li><a href="soundtracks.html">🎵 Banda Sonora</a></li>
+            <li><a href="galeria.html">🖼️ Galería</a></li>
+            <li><a href="registro_gow.html">👤 Registro</a></li>
+            <li><a href="noticias.html">📰 Noticias</a></li>
+            <li><a href="https://www.playstation.com/es-pe/god-of-war/" target="_blank" class="external-link">🎮 Juegos</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <p>© 2025 GOW Project</p>
+        </div>
+    </nav>
+
+    <main style="padding: 0; margin-top: 0;">
+        
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">LA LEYENDA DEL FANTASMA DE ESPARTA</h1>
+                <p class="hero-subtitle">De la venganza en el Olimpo a la redención en Midgard. Vive la historia del Dios de la Guerra.</p>
+                <a href="#sagas" class="cta-button">EXPLORAR LA SAGA</a>
+            </div>
         </section>
         
-        <section>
-            <h2>🎮 Juegos por Saga</h2>
+        <section class="content-wrapper">
+            <div class="quote-banner">
+                <blockquote>"Cierra tu corazón, en este viaje nos van a atacar todo tipo de criaturas. Cierra tu corazón a su desesperación. Cierra tu corazón a su sufrimiento. No sientas lastima por ellos. Ellos sentirán lástima por ti."</blockquote>
+                <cite>- Kratos a Atreus</cite>
+            </div>
+
+            <h2 style="text-align: center; margin-top: 3rem;">Dos Mitologías, Un Guerrero</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">La franquicia ha evolucionado desde un hack and slash visceral hasta una aventura narrativa profunda que ha redefinido el género.</p>
             
-            <article class="saga-griega">
-                <h3>⚡ Saga Griega</h3>
-                <p>La saga griega sigue a Kratos en su brutal venganza contra los dioses del Olimpo. Desde su traición por Ares hasta su enfrentamiento final con Zeus, esta saga define el personaje que conocemos.</p>
-                <ol type="I">
-                    <li><strong>Cronología en Orden de Historia:</strong></li>
-                    <ol>
-                        <li><strong>God of War: Ascension</strong> (2013) - Los orígenes del guerrero espartano</li>
-                        <li><strong>God of War: Chains of Olympus</strong> (2008) - Al servicio de los dioses</li>
-                        <li><strong>God of War</strong> (2005) - El nacimiento del Ghost of Sparta</li>
-                        <li><strong>God of War: Ghost of Sparta</strong> (2010) - En busca de su hermano</li>
-                        <li><strong>God of War: Betrayal</strong> (2007) - Aventura móvil</li>
-                        <li><strong>God of War II</strong> (2007) - La traición de Zeus</li>
-                        <li><strong>God of War III</strong> (2010) - La caída del Olimpo</li>
-                    </ol>
-                </ol>
-            </article>
+            <div id="sagas" class="sagas-grid">
+                
+                <article class="saga-card greek-saga">
+                    <div class="saga-content">
+                        <h3>🏛️ La Saga Griega</h3>
+                        <p>Impulsado por la ira y la venganza, Kratos desafía al Olimpo para cambiar su destino, dejando un rastro de destrucción a su paso.</p>
+                        <ul class="saga-list">
+                            <li>God of War: Ascension</li>
+                            <li>God of War: Chains of Olympus</li>
+                            <li>God of War (2005)</li>
+                            <li>God of War Ghost of Sparta</li>
+                            <li>God of War II</li>
+                            <li>God of War III</li>
+                        </ul>
+                    </div>
+                </article>
 
-            <article class="saga-nordica">
-                <h3>🔨 Saga Nórdica</h3>
-                <p>La saga nórdica presenta a un Kratos más maduro y reflexivo, que intenta dejar atrás su pasado violento mientras educa a su hijo Atreus en las tierras de Midgard.</p>
-                <ol>
-                    <li><strong>Cronología en Orden de Historia:</strong></li>
-                    <ol>
-                        <li><strong>Cómics God of War</strong> (2018) - Sucesos previos en el norte</li>
-                        <li><strong>God of War</strong> (2018) - Un nuevo comienzo en Midgard</li>
-                        <li><strong>God of War Ragnarök</strong> (2022) - El destino de los dioses</li>
-                    </ol>
-                </ol>
-            </article>
+                <article class="saga-card norse-saga">
+                    <div class="saga-content">
+                        <h3>❄️ La Saga Nórdica</h3>
+                        <p>Un Kratos más viejo y sabio busca vivir en paz en el reino de los monstruos y dioses nórdicos, mientras cría a su hijo Atreus.</p>
+                        <ul class="saga-list">
+                            <li>God of War (2018)</li>
+                            <li>God of War Ragnarök</li>
+                            <li>Ragnarök: Valhalla</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section>
-            <h2>⚔️ Arsenal de Kratos</h2>
-            <p>A lo largo de su travesía, Kratos ha empuñado algunas de las armas más legendarias de la mitología:</p>
-            <table>
-                <caption>Armas Principales por Saga</caption>
-                <thead>
-                    <tr>
-                        <th>Saga Griega</th>
-                        <th>Saga Nórdica</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="2"><strong>🔥 Espadas del Caos</strong><br>Las icónicas armas encadenadas de Kratos</td>
-                    </tr>
-                    <tr>
-                        <td><strong>⚡ Espada del Olimpo</strong><br>Forjada para acabar con la Gran Guerra</td>
-                        <td><strong>❄️ Hacha Leviatán</strong><br>Arma imbuida con poder de hielo</td>
-                    </tr>
-                    <tr>
-                        <td><strong>👊 Cestus de Nemea</strong><br>Guanteletes de león indestructible</td>
-                        <td><strong>🔱 Lanza de Draupnir</strong><br>Arma forjada por enanos</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section>
-            <h2>🌟 Características de la Saga</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
-                <div style="background: rgba(139, 0, 0, 0.2); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--gold);">
-                    <h3 style="margin-top: 0;">🎭 Historia Épica</h3>
-                    <p style="margin: 0;">Una narrativa profunda que explora temas de venganza, redención y paternidad.</p>
+        <section class="content-wrapper">
+            <h2>🌟 ¿Qué define a God of War?</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">🪓</div>
+                    <h3>Combate Visceral</h3>
+                    <p>Siente cada golpe con el Hacha Leviatán y las Espadas del Caos en un sistema de combate brutal y satisfactorio.</p>
                 </div>
-                <div style="background: rgba(139, 0, 0, 0.2); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--gold);">
-                    <h3 style="margin-top: 0;">⚔️ Combat Brutal</h3>
-                    <p style="margin: 0;">Sistema de combate visceral y satisfactorio que ha evolucionado con cada entrega.</p>
+                <div class="feature-box">
+                    <div class="feature-icon">🎭</div>
+                    <h3>Narrativa Profunda</h3>
+                    <p>Una historia emotiva sobre paternidad, pérdida y la lucha constante por ser mejor que nuestro pasado.</p>
                 </div>
-                <div style="background: rgba(139, 0, 0, 0.2); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--gold);">
-                    <h3 style="margin-top: 0;">🗿 Mitología Rica</h3>
-                    <p style="margin: 0;">Exploración auténtica de las mitologías griega y nórdica con giros únicos.</p>
+                <div class="feature-box">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Mundo Inmersivo</h3>
+                    <p>Explora reinos impresionantes diseñados en plano secuencia, desde los templos griegos hasta los picos nevados de Jötunheim.</p>
                 </div>
             </div>
         </section>
 
-        <aside id="soundtrack">
-            <h2>🎵 Banda Sonora Épica</h2>
-            <p>Sumérgete en la atmósfera de God of War III con su banda sonora original compuesta por Gerard K. Marino, Mike Reagan y Ron Fish.</p>
-            <figure>
-                <a href="https://open.spotify.com/intl-es/album/1w9j0DZdI7oa6Fz0lPtHDC?si=f62646512ac84f24" target="_blank">
-                    <img src="https://static.wikia.nocookie.net/godofwar/images/d/d8/Portada_God_of_War_III.png/revision/latest?cb=20211007233947&path-prefix=es" 
-                        alt="Portada God of War III mostrando a Kratos" 
-                        width="300"
-                        style="max-width: 100%; height: auto;">
-                </a>
-                <figcaption>🎧 Haz clic en la imagen para escuchar la banda sonora completa en Spotify</figcaption>
-            </figure>
-        </aside>
-
-        <section>
-            <h2>🏆 Premios y Reconocimientos</h2>
-            <p>God of War (2018) fue aclamado universalmente, ganando múltiples premios:</p>
-            <ul style="list-style: none; padding-left: 0;">
-                <li>🏆 Juego del Año - The Game Awards 2018</li>
-                <li>🎮 Mejor Dirección de Juego - The Game Awards 2018</li>
-                <li>🎭 Mejor Narrativa - The Game Awards 2018</li>
-                <li>🎨 Mejor Dirección de Arte - The Game Awards 2018</li>
-                <li>⭐ Más de 200 premios Game of the Year</li>
-            </ul>
+        <section class="content-wrapper awards-section">
+            <h2>🏆 Un Legado de Excelencia</h2>
+            <div class="awards-flex">
+                <div class="award-item">
+                    <span class="award-year">2018</span>
+                    <span class="award-title">Juego del Año (GOTY)</span>
+                </div>
+                <div class="award-item">
+                    <span class="award-year">2022</span>
+                    <span class="award-title">Mejor Narrativa</span>
+                </div>
+                <div class="award-item">
+                    <span class="award-year">2022</span>
+                    <span class="award-title">Mejor Diseño de Audio</span>
+                </div>
+                <div class="award-item">
+                    <span class="award-year">Legado</span>
+                    <span class="award-title">+200 Premios Ganados</span>
+                </div>
+            </div>
         </section>
 
     </main>
@@ -151,7 +135,6 @@
         <p>© 2025 Proyecto Personal GOW - David Ignacio Vargas Paytan</p>
         <address>Contacto: <a href="mailto:dvargasp@unsa.edu.pe" style="color: var(--gold);">dvargasp@unsa.edu.pe</a></address>
         <p style="margin-top: 1rem; font-size: 0.8rem;">God of War es una marca registrada de Sony Interactive Entertainment LLC.</p>
-        <p style="font-size: 0.8rem;">Este es un sitio de fans no oficial creado con fines educativos.</p>
     </footer>
 
     <script src="script.js"></script>
