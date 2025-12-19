@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Legendaria - God of War</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <h1>🖼️ Galería de los Nueve Reinos 🖼️</h1>
+        <nav>
+            <details open>
+                <summary>📜 Navegación Principal</summary>
+                <ul>
+                    <li><a href="index.html">🏠 Inicio</a></li>
+                    <li><a href="arsenal.html">⚔️ Arsenal</a></li>
+                    <li><a href="personajes.html">👥 Personajes</a></li>
+                    <li><a href="bosses.html">💀 Bosses Épicos</a></li>
+                    <li><a href="soundtracks.html">🎵 Banda Sonora</a></li>
+                    <li><a href="galeria.html">🖼️ Galería</a></li>
+                    <li><a href="registro_gow.html">👤 Registro</a></li>
+                    <li><a href="noticias.html">📰 Noticias</a></li>
+                    <li><a href="https://www.playstation.com/es-pe/god-of-war/" target="_blank">🎮 Adquiere los Juegos</a></li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section>
+            <h2 style="text-align: center;">Explora los Momentos Épicos</h2>
+            
+            <div class="gallery-controls" id="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Todo</button>
+                <button class="filter-btn" data-filter="griega">Saga Griega</button>
+                <button class="filter-btn" data-filter="nordica">Saga Nórdica</button>
+                <button class="filter-btn" data-filter="arte">Arte Conceptual</button>
+            </div>
+
+            <div class="gallery-grid" id="gallery-container">
+            </div>
+        </section>
+
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Imagen Grande" class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <footer>
+        <p>© 2025 Proyecto Personal GOW - David Ignacio Vargas Paytan</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="galeria.js"></script>
+</body>
+</html>

@@ -392,3 +392,323 @@ button[type="reset"]:hover {
 .saga-nordica {
     border-left-color: #4a90e2;
 }
+.boss-difficulty {
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.difficulty-easy { color: #4caf50; border: 1px solid #4caf50; }
+.difficulty-medium { color: #ff9800; border: 1px solid #ff9800; }
+.difficulty-hard { color: #f44336; border: 1px solid #f44336; }
+.difficulty-extreme { color: #b71c1c; border: 1px solid #b71c1c; box-shadow: 0 0 5px #b71c1c; }
+
+.boss-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(20, 20, 20, 0.9);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.boss-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+.boss-image {
+    flex: 1 1 300px;
+    min-height: 250px;
+    position: relative;
+}
+
+.boss-info {
+    flex: 2 1 400px;
+}
+
+.weapons-grid, .magic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.weapon-card, .magic-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: linear-gradient(145deg, rgba(30,30,30,0.8) 0%, rgba(10,10,10,0.9) 100%);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.weapon-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.weapon-saga {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.character-evolution {
+    border-left: 4px solid var(--primary-red);
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.character-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--gold);
+    color: var(--dark-bg);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    height: 250px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80vh;
+    border: 2px solid var(--gold);
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--text-light);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.lightbox-close:hover {
+    color: var(--primary-red);
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 20px;
+    color: var(--gold);
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px #000;
+    background: rgba(0,0,0,0.7);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.soundtrack-container {
+    display: grid;
+    gap: 2rem;
+}
+
+.album-card {
+    display: flex;
+    background: linear-gradient(90deg, rgba(20,20,20,1) 0%, rgba(40,40,40,1) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.album-card:hover {
+    transform: translateX(10px);
+    border-color: var(--gold);
+}
+
+.album-cover {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.album-info {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.track-list {
+    margin-top: 1rem;
+    list-style: none;
+    margin-left: 0;
+}
+
+.track-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.track-item:hover {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--gold);
+}
+
+.play-icon {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .boss-content, .album-card {
+        flex-direction: column;
+    }
+    .boss-image, .album-cover {
+        width: 100%;
+        height: auto;
+    }
+}
+.soundtrack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    padding: 1rem;
+}
+
+.spotify-card {
+    background: transparent;
+    border: none;
+    position: relative;
+    transition: transform 0.4s ease;
+    text-align: center;
+}
+
+.spotify-card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.spotify-link {
+    display: block;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spotify-link:hover {
+    border-color: #1DB954;
+    box-shadow: 0 0 25px rgba(29, 185, 84, 0.4);
+}
+
+.spotify-link img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.spotify-link:hover img {
+    filter: brightness(1.1);
+}
+
+.spotify-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 4rem;
+    color: #1DB954;
+    background: rgba(0,0,0,0.8);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
