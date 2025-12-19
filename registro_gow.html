@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro - Cronología GOW</title>
+    <title>Registro - Únete a la Comunidad GOW</title>
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     
     <header>
-        <h1>Cronología GOW - Registro de Usuario</h1>
+        <h1>⚔️ Registro de Guerrero ⚔️</h1>
         
         <nav>
-            <details>
-                <summary>Enlaces y Navegación</summary>
+            <details open>
+                <summary>📜 Navegación Principal</summary>
                 <ul>
-                    <li>
-                        <a href="index.html">Cronología GOW</a>
-                    </li>
-                    <li>
-                        <a href="#formulario-registro">Ir al Formulario</a>
-                    </li>
-                    <li><a href="noticias.html">Noticias GOW</a></li>
+                    <li><a href="index.html">🏠 Inicio</a></li>
+                    <li><a href="registro_gow.html">👤 Registro</a></li>
+                    <li><a href="noticias.html">📰 Noticias</a></li>
+                    <li><a href="index.html#soundtrack">🎵 Banda Sonora</a></li>
+                    <li><a href="https://www.playstation.com/es-pe/god-of-war/" target="_blank">🎮 Adquiere los Juegos</a></li>
                 </ul>
             </details>
         </nav>
@@ -29,47 +27,104 @@
 
     <main>
         <section id="formulario-registro">
-            <h2>Crea tu Cuenta para más contenido</h2>
-            <form action="/procesar-registro" method="post">
+            <h2>🛡️ Únete a la Comunidad de God of War</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Regístrate para acceder a contenido exclusivo, noticias, guías y conectar con otros guerreros espartanos.</p>
+            
+            <form action="/procesar-registro" method="post" id="registroForm">
                 <fieldset>
-                    <legend>Datos de Acceso</legend>
+                    <legend>⚡ Datos de Acceso</legend>
                     
                     <div>
-                        <label for="username">Usuario:</label>
-                        <input type="text" id="username" name="username" required 
-                               placeholder="Elige tu nombre de usuario">
+                        <label for="username">🎮 Nombre de Usuario:</label>
+                        <input type="text" 
+                               id="username" 
+                               name="username" 
+                               required 
+                               minlength="3"
+                               maxlength="20"
+                               placeholder="Elige tu nombre de guerrero">
+                        <span class="error" id="usernameError"></span>
                     </div>
 
                     <div>
-                        <label for="email_reg">Correo Electrónico:</label>
-                        <input type="email" id="email_reg" name="email_reg" required 
+                        <label for="email_reg">📧 Correo Electrónico:</label>
+                        <input type="email" 
+                               id="email_reg" 
+                               name="email_reg" 
+                               required 
                                placeholder="kratos@olimpo.com">
+                        <span class="error" id="emailError"></span>
                     </div>
 
                     <div>
-                        <label for="password_reg">Contraseña:</label>
-                        <input type="password" id="password_reg" name="password_reg" required 
-                               minlength="8" placeholder="Mínimo 8 caracteres">
+                        <label for="password_reg">🔒 Contraseña:</label>
+                        <input type="password" 
+                               id="password_reg" 
+                               name="password_reg" 
+                               required 
+                               minlength="8"
+                               placeholder="Mínimo 8 caracteres">
+                        <span class="error" id="passwordError"></span>
                     </div>
 
                     <div>
+                        <label for="password_confirm">🔒 Confirmar Contraseña:</label>
+                        <input type="password" 
+                               id="password_confirm" 
+                               name="password_confirm" 
+                               required 
+                               minlength="8"
+                               placeholder="Confirma tu contraseña">
+                        <span class="error" id="confirmError"></span>
+                    </div>
+
+                    <div style="margin: 1.5rem 0;">
                         <input type="checkbox" id="terminos" name="terminos" required>
-                        <label for="terminos">Acepto los términos y condiciones.</label>
+                        <label for="terminos" style="display: inline;">Acepto los términos y condiciones de uso</label>
                     </div>
 
-                    <div>
-                        <button type="submit">Registrarse</button>
-                        <button type="reset">Limpiar</button>
+                    <div style="margin: 1rem 0;">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter" style="display: inline;">Deseo recibir noticias y actualizaciones sobre God of War</label>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <button type="submit">⚔️ Registrarse</button>
+                        <button type="reset">🔄 Limpiar</button>
                     </div>
                 </fieldset>
             </form>
+
+            <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: rgba(26, 0, 0, 0.3); border-radius: 8px;">
+                <p>¿Ya tienes una cuenta? <a href="#" style="color: var(--gold); text-decoration: none; font-weight: bold;">Inicia Sesión</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>🎁 Beneficios de Registrarte</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <div style="background: rgba(139, 0, 0, 0.2); padding: 1.5rem; border-radius: 8px; text-align: center;">
+                    <h3>📰 Noticias Exclusivas</h3>
+                    <p>Sé el primero en enterarte de nuevos lanzamientos y actualizaciones.</p>
+                </div>
+                <div style="background: rgba(139, 0, 0, 0.2); padding: 1.5rem; border-radius: 8px; text-align: center;">
+                    <h3>📚 Guías y Trucos</h3>
+                    <p>Accede a guías completas para dominar cada juego de la saga.</p>
+                </div>
+                <div style="background: rgba(139, 0, 0, 0.2); padding: 1.5rem; border-radius: 8px; text-align: center;">
+                    <h3>👥 Comunidad</h3>
+                    <p>Conecta con otros fans y comparte tu pasión por God of War.</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>© 2025 Proyecto Personal GOW - David Ignacio Vargas Paytan</p>
-        <address>Contacto: dvargasp@unsa.edu.pe</address>
+        <address>Contacto: <a href="mailto:dvargasp@unsa.edu.pe" style="color: var(--gold);">dvargasp@unsa.edu.pe</a></address>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">God of War es una marca registrada de Sony Interactive Entertainment LLC.</p>
     </footer>
 
+    <script src="registro.js"></script>
 </body>
 </html>
