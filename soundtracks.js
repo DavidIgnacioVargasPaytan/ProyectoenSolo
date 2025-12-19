@@ -2,9 +2,24 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const soundtracks = [
         {
+            title: "God of War: Ascension",
+            cover: "imagenes/portadas/gow-ascencion.jpg", 
+            spotifyUrl: "https://open.spotify.com/intl-es/album/5HbN8AlVNXadPJglFJI8EC?si=db33d1073e56430a" 
+        },
+        {
+            title: "God of War: Chains of Olympus",
+            cover: "imagenes/portadas/gow-chains.jpg", 
+            spotifyUrl: "https://www.youtube.com/watch?v=r7YcBW2uwEA&list=PL1n4ES3x6XXbjurg1rZUbX0yi6GGHOoAk" 
+        },
+        {
             title: "God of War (2005)",
             cover: "imagenes/portadas/gowI.jpg", 
             spotifyUrl: "https://open.spotify.com/intl-es/album/4tZGORVhBzO0Kzj5oaOOMn?si=9117337c078241b9"
+        },
+        {
+            title: "God of War: Ghost of Sparta",
+            cover: "imagenes/portadas/gow-gos.jpg",
+            spotifyUrl: "https://open.spotify.com/intl-es/album/5yN2kJh22LtZVn55wVMH7h?si=8d6ead675cf9455f"
         },
         {
             title: "God of War II",
@@ -25,6 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "God of War Ragnarök",
             cover: "imagenes/portadas/gow-ragnarok.jpg",
             spotifyUrl: "https://open.spotify.com/intl-es/album/7LmeRZOi905AochW9J9FAA?si=05a7b10488a94500"
+        },
+        {
+            title: "GoW Ragnarök: Valhalla",
+            cover: "imagenes/portadas/gow-valhalla.jpg",
+            spotifyUrl: "https://open.spotify.com/intl-es/album/2j8WG0EzaUgsmSy2iPIwJZ?si=fe80db000c5a4d59"
         }
     ];
 
@@ -41,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <a href="${album.spotifyUrl}" target="_blank" class="spotify-link" title="Escuchar en Spotify">
                     <img src="${album.cover}" 
                          alt="Portada ${album.title}" 
-                         onerror="this.src='https://via.placeholder.com/250x250?text=Imagen+No+Encontrada'; this.style.border='2px solid red';">
+                         onerror="this.src='https://via.placeholder.com/250x250?text=Portada+Faltante';">
                     <div class="spotify-icon">🎧</div>
                 </a>
                 <h3 class="album-title">${album.title}</h3>
