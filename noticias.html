@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias God of War - Últimas Actualizaciones</title>
+    <title>Noticias God of War - La Gaceta de los Reinos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css"> 
+    <link rel="icon" type="image/png" href="imagenes/index/favicon.png">
+    <meta name="description" content="Últimas noticias, actualizaciones y eventos del universo God of War.">
 </head>
 <body>
     
@@ -20,15 +23,15 @@
         </div>
         
         <ul class="nav-links">
-            <li><a href="index.html">🏠 Inicio</a></li>
-            <li><a href="arsenal.html">⚔️ Arsenal</a></li>
-            <li><a href="personajes.html">👥 Personajes</a></li>
-            <li><a href="bosses.html">💀 Bosses Épicos</a></li>
-            <li><a href="soundtracks.html">🎵 Banda Sonora</a></li>
-            <li><a href="galeria.html">🖼️ Galería</a></li>
-            <li><a href="registro_gow.html">👤 Registro</a></li>
-            <li><a href="noticias.html">📰 Noticias</a></li>
-            <li><a href="https://www.playstation.com/es-pe/god-of-war/" target="_blank" class="external-link">🎮 Juegos</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li><a href="arsenal.html"><i class="fa-solid fa-khanda"></i> Arsenal</a></li>
+            <li><a href="personajes.html"><i class="fa-solid fa-users"></i> Personajes</a></li>
+            <li><a href="bosses.html"><i class="fa-solid fa-skull"></i> Bosses Épicos</a></li>
+            <li><a href="soundtracks.html"><i class="fa-solid fa-music"></i> Banda Sonora</a></li>
+            <li><a href="galeria.html"><i class="fa-solid fa-image"></i> Galería</a></li>
+            <li><a href="registro_gow.html"><i class="fa-solid fa-user-plus"></i> Registro</a></li>
+            <li><a href="noticias.html" class="active"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
+            <li><a href="https://www.playstation.com/es-pe/god-of-war/" target="_blank" class="external-link"><i class="fa-brands fa-playstation"></i> Juegos</a></li>
         </ul>
 
         <div class="sidebar-footer">
@@ -37,89 +40,103 @@
     </nav>
 
     <header class="top-header">
-        <h1>NOTICIAS DE GOD OF WAR</h1>
+        <h1>GACETA DE LOS REINOS</h1>
     </header>
 
     <main>
         
-        <section>
-            <h2>🔥 Últimas Noticias</h2>
-            <p style="text-align: center; margin-bottom: 2rem;">Mantente al día con las últimas novedades sobre God of War y la franquicia.</p>
+        <section class="intro-section">
+            <h2><i class="fa-solid fa-scroll"></i> Crónicas de Midgard y el Olimpo</h2>
+            <p>Las últimas revelaciones, profecías y susurros de los desarrolladores.</p>
         </section>
 
-        <section>
-            <article>
-                <h3>⚡ God of War Ragnarök - Valhalla: Nuevo DLC Gratuito</h3>
-                <p><time datetime="2024-12-12">12 de Diciembre, 2024</time></p>
-                <p>Santa Monica Studio sorprendió a los fans con el lanzamiento de Valhalla, una expansión gratuita de God of War Ragnarök que explora la psique de Kratos a través de un modo roguelite innovador.</p>
-                <p>Esta expansión presenta combates desafiantes, nuevas habilidades y una narrativa introspectiva que profundiza en el pasado del Fantasma de Esparta mientras entrena para convertirse en el Dios de la Guerra que Asgard necesita.</p>
-                <figure style="margin: 1.5rem 0;">
-                    <div style="background: rgba(26, 26, 26, 0.5); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
-                        <p style="color: var(--text-gray); font-style: italic; margin: 0;">🎮 Disponible ahora de forma gratuita para todos los propietarios de God of War Ragnarök</p>
+        <article class="news-hero">
+            <div class="news-hero-content">
+                <div class="news-badge">Destacado</div>
+                <h3><i class="fa-solid fa-bolt"></i> God of War Ragnarök: Valhalla</h3>
+                <p class="news-date"><i class="fa-regular fa-clock"></i> <time datetime="2024-12-12">12 de Diciembre, 2024</time></p>
+                <p>Santa Monica Studio sorprendió a los fans con el lanzamiento de Valhalla, una expansión gratuita que explora la psique de Kratos a través de un modo roguelite innovador. Profundiza en el pasado del Fantasma de Esparta mientras entrena para convertirse en el Dios que Asgard necesita.</p>
+                <div class="news-footer">
+                    <span><i class="fa-brands fa-playstation"></i> DLC Gratuito ya disponible</span>
+                </div>
+            </div>
+        </article>
+
+        <div class="news-layout">
+            
+            <div class="news-feed">
+                <h3 class="section-label">Últimos Artículos</h3>
+
+                <article class="news-card">
+                    <div class="news-icon-wrapper"><i class="fa-solid fa-film"></i></div>
+                    <div class="news-content">
+                        <h4>Serie de Amazon Prime Video</h4>
+                        <p class="news-date"><time datetime="2024-10-20">20 Oct, 2024</time></p>
+                        <p>La adaptación live-action confirma su fase de producción para 2025. Se espera que explore tanto la era griega como la nórdica, manteniendo la fidelidad narrativa.</p>
                     </div>
-                </figure>
-            </article>
+                </article>
 
-            <article>
-                <h3>🎬 Serie de God of War en Amazon Prime Video</h3>
-                <p><time datetime="2024-10-20">20 de Octubre, 2024</time></p>
-                <p>Amazon Prime Video ha confirmado que la serie live-action de God of War continúa en desarrollo activo. La producción comenzará en 2025 con el objetivo de capturar la esencia épica de la saga.</p>
-                <p>Se espera que la serie explore tanto la era griega como la nórdica de Kratos, ofreciendo una adaptación fiel que satisfaga a los fans de larga data mientras introduce la historia a nuevas audiencias.</p>
-            </article>
+                <article class="news-card">
+                    <div class="news-icon-wrapper"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="news-content">
+                        <h4>Hito Histórico: 15 Millones</h4>
+                        <p class="news-date"><time datetime="2024-09-15">15 Sep, 2024</time></p>
+                        <p>Ragnarök supera las 15 millones de copias vendidas. La comunidad de PC celebra el rendimiento optimizado y las opciones gráficas ultra.</p>
+                    </div>
+                </article>
 
-            <article>
-                <h3>🏆 God of War Ragnarök Supera las 15 Millones de Copias</h3>
-                <p><time datetime="2024-09-15">15 de Septiembre, 2024</time></p>
-                <p>Sony Interactive Entertainment anunció que God of War Ragnarök ha superado las 15 millones de copias vendidas en todas las plataformas, consolidándose como uno de los juegos más exitosos de PlayStation Studios.</p>
-                <p>El juego ha sido especialmente bien recibido en PC, donde los jugadores han valorado las opciones de personalización gráfica y el rendimiento optimizado que ofrece la versión de escritorio.</p>
-            </article>
-        </section>
-
-        <section>
-            <h2>📅 Próximos Eventos</h2>
-            <div style="background: rgba(139, 0, 0, 0.2); padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-                <h3 style="margin-top: 0;">🎮 PlayStation Showcase 2025</h3>
-                <p><strong>Fecha tentativa:</strong> Marzo 2025</p>
-                <p>Se rumorea que Sony podría revelar información sobre futuros proyectos relacionados con God of War en su próximo showcase. Los fans esperan ansiosos cualquier indicio sobre una posible secuela o spin-off.</p>
+                <article class="news-card">
+                    <div class="news-icon-wrapper"><i class="fa-solid fa-book-journal-whills"></i></div>
+                    <div class="news-content">
+                        <h4>Novela Gráfica Anunciada</h4>
+                        <p class="news-date"><time datetime="2024-08-30">30 Ago, 2024</time></p>
+                        <p>Dark Horse Comics lanzará una historia inédita que conecta los eventos de 2018 con el Fimbulvetr. Llegará en Abril de 2025.</p>
+                    </div>
+                </article>
             </div>
 
-            <div style="background: rgba(139, 0, 0, 0.2); padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-                <h3 style="margin-top: 0;">📚 Novela Gráfica de God of War</h3>
-                <p><strong>Fecha:</strong> Abril 2025</p>
-                <p>Dark Horse Comics lanzará una nueva novela gráfica que explorará eventos no contados entre God of War (2018) y Ragnarök, ofreciendo nuevas perspectivas sobre la relación entre Kratos y Atreus.</p>
-            </div>
-        </section>
+            <aside class="news-sidebar">
+                
+                <div class="sidebar-widget">
+                    <h3><i class="fa-regular fa-calendar-days"></i> Calendario</h3>
+                    <ul class="event-list">
+                        <li>
+                            <span class="event-date">MAR 2025</span>
+                            <span class="event-title">PlayStation Showcase</span>
+                            <small>Posibles anuncios de la franquicia.</small>
+                        </li>
+                        <li>
+                            <span class="event-date">ABR 2025</span>
+                            <span class="event-title">Lanzamiento Cómic</span>
+                            <small>Nueva historia canon.</small>
+                        </li>
+                    </ul>
+                </div>
 
-        <section>
-            <h2>💬 Lo Que Dicen los Fans</h2>
-            <div style="display: grid; gap: 1.5rem; margin-top: 1.5rem;">
-                <div style="background: rgba(26, 26, 26, 0.5); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--gold);">
-                    <p style="margin: 0; font-style: italic;">"Valhalla es exactamente lo que necesitaba God of War Ragnarök. El modo roguelite es adictivo y la historia es profunda."</p>
-                    <p style="margin-top: 0.5rem; color: var(--gold); font-weight: bold;">- GamerEspartano92</p>
+                <div class="sidebar-widget">
+                    <h3><i class="fa-solid fa-comments"></i> La Voz de los Reinos</h3>
+                    <div class="community-quote">
+                        <p>"Valhalla es la terapia que Kratos necesitaba. Narrativa pura."</p>
+                        <cite>- @GamerEspartano92</cite>
+                    </div>
+                    <div class="community-quote">
+                        <p>"Ver esto en PC a 60fps es otra experiencia."</p>
+                        <cite>- @MidgardPC</cite>
+                    </div>
                 </div>
-                <div style="background: rgba(26, 26, 26, 0.5); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--gold);">
-                    <p style="margin: 0; font-style: italic;">"La versión de PC es impresionante. Los 60+ FPS hacen que el combate se sienta aún más fluido."</p>
-                    <p style="margin-top: 0.5rem; color: var(--gold); font-weight: bold;">- KratosFanPC</p>
-                </div>
-                <div style="background: rgba(26, 26, 26, 0.5); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--gold);">
-                    <p style="margin: 0; font-style: italic;">"No puedo esperar por la serie de Amazon. Espero que le hagan justicia a la historia."</p>
-                    <p style="margin-top: 0.5rem; color: var(--gold); font-weight: bold;">- MidgardWarrior</p>
-                </div>
-            </div>
-        </section>
 
-        <section id="newsletter-section" style="background: linear-gradient(135deg, rgba(139, 0, 0, 0.3) 0%, rgba(26, 26, 26, 0.3) 100%); border: 2px solid var(--gold);">
-            <h2 style="text-align: center;">📬 Suscríbete al Newsletter</h2>
-            <p style="text-align: center; margin-bottom: 2rem;">Recibe las últimas noticias de God of War directamente en tu correo.</p>
-            <form id="newsletterForm" style="max-width: 500px; margin: 0 auto;">
-                <input type="email" 
-                       id="newsletter-email" 
-                       placeholder="tu@email.com" 
-                       required
-                       style="width: 100%; margin-bottom: 1rem;">
-                <button type="submit" style="width: 100%;">✉️ Suscribirme</button>
-            </form>
-        </section>
+                <div class="sidebar-widget newsletter-widget">
+                    <h3><i class="fa-solid fa-envelope-open-text"></i> El Cuervo de Odín</h3>
+                    <p>Recibe las noticias antes que nadie.</p>
+                    <form id="newsletterForm" class="sidebar-form">
+                        <input type="email" id="newsletter-email" placeholder="tu@email.com" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
+
+            </aside>
+
+        </div>
 
     </main>
 

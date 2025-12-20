@@ -7,7 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css"> 
+    <link rel="icon" type="image/png" href="imagenes/index/favicon.png">
 </head>
 <body>
     
@@ -20,15 +22,15 @@
         </div>
         
         <ul class="nav-links">
-            <li><a href="index.html">🏠 Inicio</a></li>
-            <li><a href="arsenal.html">⚔️ Arsenal</a></li>
-            <li><a href="personajes.html">👥 Personajes</a></li>
-            <li><a href="bosses.html">💀 Bosses Épicos</a></li>
-            <li><a href="soundtracks.html">🎵 Banda Sonora</a></li>
-            <li><a href="galeria.html">🖼️ Galería</a></li>
-            <li><a href="registro_gow.html">👤 Registro</a></li>
-            <li><a href="noticias.html">📰 Noticias</a></li>
-            <li><a href="https://www.playstation.com/es-pe/god-of-war/" target="_blank" class="external-link">🎮 Juegos</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li><a href="arsenal.html"><i class="fa-solid fa-khanda"></i> Arsenal</a></li>
+            <li><a href="personajes.html"><i class="fa-solid fa-users"></i> Personajes</a></li>
+            <li><a href="bosses.html"><i class="fa-solid fa-skull"></i> Bosses Épicos</a></li>
+            <li><a href="soundtracks.html"><i class="fa-solid fa-music"></i> Banda Sonora</a></li>
+            <li><a href="galeria.html"><i class="fa-solid fa-image"></i> Galería</a></li>
+            <li><a href="registro_gow.html"><i class="fa-solid fa-user-plus"></i> Registro</a></li>
+            <li><a href="noticias.html"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
+            <li><a href="https://www.playstation.com/es-pe/god-of-war/" target="_blank" class="external-link"><i class="fa-brands fa-playstation"></i> Juegos</a></li>
         </ul>
 
         <div class="sidebar-footer">
@@ -37,107 +39,84 @@
     </nav>
 
     <header class="top-header">
-        <h1>REGISTRO DE GUERRERO/h1>
+        <h1>REGISTRO DE GUERRERO</h1>
     </header>
 
-    <main>
-        <section id="formulario-registro">
-            <h2>🛡️ Únete a la Comunidad de God of War</h2>
-            <p style="text-align: center; margin-bottom: 2rem;">Regístrate para acceder a contenido exclusivo, noticias, guías y conectar con otros guerreros espartanos.</p>
-            
-            <form action="/procesar-registro" method="post" id="registroForm">
-                <fieldset>
-                    <legend>⚡ Datos de Acceso</legend>
-                    
-                    <div>
-                        <label for="username">🎮 Nombre de Usuario:</label>
-                        <input type="text" 
-                               id="username" 
-                               name="username" 
-                               required 
-                               minlength="3"
-                               maxlength="20"
-                               placeholder="Elige tu nombre de guerrero">
-                        <span class="error" id="usernameError"></span>
-                    </div>
-
-                    <div>
-                        <label for="email_reg">📧 Correo Electrónico:</label>
-                        <input type="email" 
-                               id="email_reg" 
-                               name="email_reg" 
-                               required 
-                               placeholder="kratos@olimpo.com">
-                        <span class="error" id="emailError"></span>
-                    </div>
-
-                    <div>
-                        <label for="password_reg">🔒 Contraseña:</label>
-                        <input type="password" 
-                               id="password_reg" 
-                               name="password_reg" 
-                               required 
-                               minlength="8"
-                               placeholder="Mínimo 8 caracteres">
-                        <span class="error" id="passwordError"></span>
-                    </div>
-
-                    <div>
-                        <label for="password_confirm">🔒 Confirmar Contraseña:</label>
-                        <input type="password" 
-                               id="password_confirm" 
-                               name="password_confirm" 
-                               required 
-                               minlength="8"
-                               placeholder="Confirma tu contraseña">
-                        <span class="error" id="confirmError"></span>
-                    </div>
-
-                    <div style="margin: 1.5rem 0;">
-                        <input type="checkbox" id="terminos" name="terminos" required>
-                        <label for="terminos" style="display: inline;">Acepto los términos y condiciones de uso</label>
-                    </div>
-
-                    <div style="margin: 1rem 0;">
-                        <input type="checkbox" id="newsletter" name="newsletter">
-                        <label for="newsletter" style="display: inline;">Deseo recibir noticias y actualizaciones sobre God of War</label>
-                    </div>
-
-                    <div style="display: flex; gap: 1rem; margin-top: 2rem;">
-                        <button type="submit">⚔️ Registrarse</button>
-                        <button type="reset">🔄 Limpiar</button>
-                    </div>
-                </fieldset>
-            </form>
-
-            <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: rgba(26, 0, 0, 0.3); border-radius: 8px;">
-                <p>¿Ya tienes una cuenta? <a href="#" style="color: var(--gold); text-decoration: none; font-weight: bold;">Inicia Sesión</a></p>
+    <main class="auth-main">
+        <section class="auth-container">
+            <div class="auth-header">
+                <i class="fa-solid fa-dragon fa-3x" style="color: var(--primary-red); margin-bottom: 1rem;"></i>
+                <h2>Únete a la Batalla</h2>
+                <p>Crea tu cuenta para acceder a los secretos del Lore.</p>
             </div>
+            
+            <form id="registroForm" class="auth-form">
+                
+                <div class="input-group">
+                    <label for="username"><i class="fa-solid fa-gamepad"></i> Usuario</label>
+                    <input type="text" id="username" name="username" placeholder="Kratos_Spartan" required minlength="3" maxlength="20">
+                    <span class="error-msg" id="usernameError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="email_reg"><i class="fa-solid fa-envelope"></i> Email</label>
+                    <input type="email" id="email_reg" name="email_reg" placeholder="ejemplo@midgard.com" required>
+                    <span class="error-msg" id="emailError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="password_reg"><i class="fa-solid fa-lock"></i> Contraseña</label>
+                    <input type="password" id="password_reg" name="password_reg" placeholder="••••••••" required minlength="8">
+                    <span class="error-msg" id="passwordError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="password_confirm"><i class="fa-solid fa-shield"></i> Confirmar</label>
+                    <input type="password" id="password_confirm" name="password_confirm" placeholder="••••••••" required minlength="8">
+                    <span class="error-msg" id="confirmError"></span>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">Acepto los términos de servicio</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Recibir noticias del Ragnarök</label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-register">Registrarse</button>
+                </div>
+
+                <div class="form-footer">
+                    <p>¿Ya tienes cuenta? <a href="#">Inicia Sesión</a></p>
+                </div>
+            </form>
         </section>
 
-        <section>
-            <h2>🎁 Beneficios de Registrarte</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
-                <div style="background: rgba(139, 0, 0, 0.2); padding: 1.5rem; border-radius: 8px; text-align: center;">
-                    <h3>📰 Noticias Exclusivas</h3>
-                    <p>Sé el primero en enterarte de nuevos lanzamientos y actualizaciones.</p>
-                </div>
-                <div style="background: rgba(139, 0, 0, 0.2); padding: 1.5rem; border-radius: 8px; text-align: center;">
-                    <h3>📚 Guías y Trucos</h3>
-                    <p>Accede a guías completas para dominar cada juego de la saga.</p>
-                </div>
-                <div style="background: rgba(139, 0, 0, 0.2); padding: 1.5rem; border-radius: 8px; text-align: center;">
-                    <h3>👥 Comunidad</h3>
-                    <p>Conecta con otros fans y comparte tu pasión por God of War.</p>
-                </div>
+        <section class="benefits-section">
+            <div class="benefit-card">
+                <i class="fa-solid fa-newspaper"></i>
+                <h3>Noticias</h3>
+                <p>Actualizaciones al instante.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fa-solid fa-book-journal-whills"></i>
+                <h3>Guías</h3>
+                <p>Secretos y trucos.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fa-solid fa-users"></i>
+                <h3>Comunidad</h3>
+                <p>Foro de discusión.</p>
             </div>
         </section>
     </main>
 
     <footer>
         <p>© 2025 Proyecto Personal GOW - David Ignacio Vargas Paytan</p>
-        <address>Contacto: <a href="mailto:dvargasp@unsa.edu.pe" style="color: var(--gold);">dvargasp@unsa.edu.pe</a></address>
-        <p style="margin-top: 1rem; font-size: 0.8rem;">God of War es una marca registrada de Sony Interactive Entertainment LLC.</p>
     </footer>
 
     <script src="script.js"></script>

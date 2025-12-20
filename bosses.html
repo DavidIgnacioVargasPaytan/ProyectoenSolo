@@ -7,7 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="imagenes/index/favicon.png">
+    <meta name="description" content="El portal definitivo de God of War. Explora la saga griega y nórdica, conoce a los personajes, escucha la banda sonora y únete a la comunidad.">
+    <meta name="keywords" content="God of War, Kratos, Ragnarok, Atreus, Saga Griega, Saga Nórdica, Playstation, Videojuegos">
+    <meta name="author" content="David Ignacio Vargas Paytan">
 </head>
 <body>
     
@@ -20,15 +25,15 @@
         </div>
         
         <ul class="nav-links">
-            <li><a href="index.html">🏠 Inicio</a></li>
-            <li><a href="arsenal.html">⚔️ Arsenal</a></li>
-            <li><a href="personajes.html">👥 Personajes</a></li>
-            <li><a href="bosses.html">💀 Bosses Épicos</a></li>
-            <li><a href="soundtracks.html">🎵 Banda Sonora</a></li>
-            <li><a href="galeria.html">🖼️ Galería</a></li>
-            <li><a href="registro_gow.html">👤 Registro</a></li>
-            <li><a href="noticias.html">📰 Noticias</a></li>
-            <li><a href="https://www.playstation.com/es-pe/god-of-war/" target="_blank" class="external-link">🎮 Juegos</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li><a href="arsenal.html"><i class="fa-solid fa-khanda"></i> Arsenal</a></li>
+            <li><a href="personajes.html"><i class="fa-solid fa-users"></i> Personajes</a></li>
+            <li><a href="bosses.html" class="active"><i class="fa-solid fa-skull"></i> Bosses Épicos</a></li>
+            <li><a href="soundtracks.html"><i class="fa-solid fa-music"></i> Banda Sonora</a></li>
+            <li><a href="galeria.html"><i class="fa-solid fa-image"></i> Galería</a></li>
+            <li><a href="registro_gow.html"><i class="fa-solid fa-user-plus"></i> Registro</a></li>
+            <li><a href="noticias.html"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
+            <li><a href="https://www.playstation.com/es-pe/god-of-war/" target="_blank" class="external-link"><i class="fa-brands fa-playstation"></i> Juegos</a></li>
         </ul>
 
         <div class="sidebar-footer">
@@ -43,12 +48,12 @@
     <main>
         
         <section class="intro-section">
-            <h2>⚔️ Los Enemigos Más Legendarios</h2>
+            <h2><i class="fa-solid fa-dragon"></i> Los Enemigos Más Legendarios</h2>
             <p>Desde titanes colosales hasta dioses vengadores, Kratos ha enfrentado a los enemigos más poderosos de dos mitologías. Cada batalla es una prueba de fuerza, habilidad y determinación.</p>
         </section>
 
         <section id="bosses-griegos" class="boss-zigzag-section">
-            <h2>⚡ Bosses de la Saga Griega</h2>
+            <h2><i class="fa-solid fa-bolt"></i> Bosses de la Saga Griega</h2>
 
             <div class="zigzag-container">
                 
@@ -206,7 +211,7 @@
         </section>
 
         <section id="bosses-nordicos" class="boss-zigzag-section">
-            <h2>🔨 Bosses de la Saga Nórdica</h2>
+            <h2><i class="fa-solid fa-hammer"></i> Bosses de la Saga Nórdica</h2>
 
             <div class="zigzag-container">
 
@@ -304,46 +309,88 @@
         </section>
 
         <section id="boss-tips">
-            <h2>💡 Tips para Derrotar Jefes</h2>
+            <h2><i class="fa-solid fa-lightbulb"></i> Tips para Derrotar Jefes</h2>
             <div class="tips-grid">
                 <article class="tip-card">
-                    <h3>🛡️ Aprende los Patrones</h3>
+                    <h3><i class="fa-solid fa-shield-halved"></i> Aprende los Patrones</h3>
                     <p>La paciencia es clave. No ataques a lo loco; observa, esquiva y haz parry.</p>
                 </article>
                 <article class="tip-card">
-                    <h3>⚔️ Mejora tu Equipo</h3>
+                    <h3><i class="fa-solid fa-arrow-up-from-bracket"></i> Mejora tu Equipo</h3>
                     <p>Visita a Brok y Sindri. Un nivel bajo de equipo hace que los jefes sean esponjas de daño.</p>
                 </article>
                 <article class="tip-card">
-                    <h3>🧊 Cambia de Arma</h3>
+                    <h3><i class="fa-solid fa-shuffle"></i> Cambia de Arma</h3>
                     <p>Usa Fuego contra enemigos de Hielo y viceversa. Alterna armas para maximizar daño.</p>
                 </article>
             </div>
         </section>
 
-        <section id="boss-ranking">
-            <h2>🏆 Ranking de Dificultad</h2>
-            <div class="ranking-list">
-                <div class="rank-item rank-1">
-                    <span class="rank-number">1</span>
-                    <div class="rank-info"><h3>Sigrun (2018) 👑</h3></div>
+        <section id="boss-ranking" class="ranking-section">
+            <h2><i class="fa-solid fa-trophy"></i> El Panteón de la Dificultad</h2>
+            <p style="text-align: center; margin-bottom: 4rem;">Los 5 desafíos definitivos de la saga.</p>
+
+            <div class="podium-container">
+                
+                <div class="podium-step rank-4">
+                    <div class="boss-avatar">
+                        <img src="imagenes/bosses/ZEUS.png" alt="Zeus">
+                        <div class="medal iron">4</div>
+                    </div>
+                    <div class="step-block">
+                        <h3>Zeus</h3>
+                        <small>GOW III</small>
+                    </div>
                 </div>
-                <div class="rank-item rank-2">
-                    <span class="rank-number">2</span>
-                    <div class="rank-info"><h3>Gná (Ragnarök) 🦌</h3></div>
+
+                <div class="podium-step rank-2">
+                    <div class="boss-avatar">
+                        <img src="imagenes/bosses/gna.jpg" alt="Gná">
+                        <div class="medal silver">2</div>
+                    </div>
+                    <div class="step-block">
+                        <h3>Gná</h3>
+                        <span>Reina</span>
+                        <small>Ragnarök</small>
+                    </div>
                 </div>
-                <div class="rank-item rank-3">
-                    <span class="rank-number">3</span>
-                    <div class="rank-info"><h3>Thor (Ragnarök) ⚡</h3></div>
+
+                <div class="podium-step rank-1">
+                    <div class="crown-icon"><i class="fa-solid fa-crown"></i></div>
+                    <div class="boss-avatar">
+                        <img src="imagenes/bosses/sigrun.jpg" alt="Sigrun">
+                        <div class="medal gold">1</div>
+                    </div>
+                    <div class="step-block">
+                        <h3>Sigrun</h3>
+                        <span>Suprema</span>
+                        <small>GOW 2018</small>
+                    </div>
                 </div>
-                <div class="rank-item rank-3">
-                    <span class="rank-number">4</span>
-                    <div class="rank-info"><h3>Zeus (GOW III) ⚡</h3></div>
+
+                <div class="podium-step rank-3">
+                    <div class="boss-avatar">
+                        <img src="imagenes/bosses/thor.png" alt="Thor">
+                        <div class="medal bronze">3</div>
+                    </div>
+                    <div class="step-block">
+                        <h3>Thor</h3>
+                        <span>Aesir</span>
+                        <small>Ragnarök</small>
+                    </div>
                 </div>
-                <div class="rank-item rank-3">
-                    <span class="rank-number">5</span>
-                    <div class="rank-info"><h3>Baldur (2018) ❄️</h3></div>
+
+                <div class="podium-step rank-5">
+                    <div class="boss-avatar">
+                        <img src="imagenes/bosses/baldur.png" alt="Baldur">
+                        <div class="medal stone">5</div>
+                    </div>
+                    <div class="step-block">
+                        <h3>Baldur</h3>
+                        <small>GOW 2018</small>
+                    </div>
                 </div>
+
             </div>
         </section>
 

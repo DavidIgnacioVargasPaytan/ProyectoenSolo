@@ -64,13 +64,14 @@ document.addEventListener('DOMContentLoaded', function() {
             item.className = 'gallery-item';
             item.style.animation = `fadeIn 0.5s ease forwards ${index * 0.05}s`;
             
+            // AQUI ESTA EL CAMBIO DEL ICONO
             item.innerHTML = `
                 <img src="${img.src}" 
                      alt="${img.caption}" 
                      loading="lazy" 
                      onerror="this.parentElement.style.display='none'">
                 <div class="gallery-overlay">
-                    <span>🔍 Ver</span>
+                    <span><i class="fa-solid fa-magnifying-glass-plus"></i> Ver</span>
                 </div>
             `;
             
