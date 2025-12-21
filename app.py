@@ -2,8 +2,9 @@ from flask import Flask, render_template, request, url_for
 
 app = Flask(__name__)
 
+#BASE DE DATOS 1: BOSSES
 lista_bosses = [
-    # SAGA GRIEGA
+    #SAGA GRIEGA
     {
         "nombre": "La Hidra del Egeo",
         "juego": "God of War I",
@@ -157,6 +158,56 @@ lista_bosses = [
     }
 ]
 
+#BASE DE DATOS 2: SOUNDTRACKS (NUEVO)
+
+lista_soundtracks = [
+    {
+        "title": "God of War: Ascension",
+        "cover": "imagenes/portadas/gow-ascencion.jpg", 
+        "spotifyUrl": "https://open.spotify.com/search/God%20of%20War%20Ascension" 
+    },
+    {
+        "title": "God of War: Chains of Olympus",
+        "cover": "imagenes/portadas/gow-chains.jpg", 
+        "spotifyUrl": "https://open.spotify.com/search/God%20of%20War%20Chains%20of%20Olympus" 
+    },
+    {
+        "title": "God of War (2005)",
+        "cover": "imagenes/portadas/gowI.jpg", 
+        "spotifyUrl": "https://open.spotify.com/album/3t01dM3C2v1h6yGg5e8s3d"
+    },
+    {
+        "title": "God of War: Ghost of Sparta",
+        "cover": "imagenes/portadas/gow-gos.jpg",
+        "spotifyUrl": "https://open.spotify.com/search/God%20of%20War%20Ghost%20of%20Sparta"
+    },
+    {
+        "title": "God of War II",
+        "cover": "imagenes/portadas/gowII.jpg",
+        "spotifyUrl": "https://open.spotify.com/album/2z8s9s9s9s9s9"
+    },
+    {
+        "title": "God of War III",
+        "cover": "imagenes/portadas/gow III.jpg",
+        "spotifyUrl": "https://open.spotify.com/album/3GZ9q9q9q9q9q"
+    },
+    {
+        "title": "God of War (2018)",
+        "cover": "imagenes/portadas/gow4.jpg",
+        "spotifyUrl": "https://open.spotify.com/album/3Aieu1l1l1l1l"
+    },
+    {
+        "title": "God of War Ragnarök",
+        "cover": "imagenes/portadas/gow-ragnarok.jpg",
+        "spotifyUrl": "https://open.spotify.com/album/4Bz1z1z1z1z1z"
+    },
+    {
+        "title": "GoW Ragnarök: Valhalla",
+        "cover": "imagenes/portadas/gow-valhalla.jpg",
+        "spotifyUrl": "https://open.spotify.com/album/5Cv1v1v1v1v1v"
+    }
+]
+
 @app.route('/')
 @app.route('/index.html')
 def index():
@@ -181,29 +232,24 @@ def bosses():
                            has_next=has_next, 
                            has_prev=has_prev)
 
-@app.route('/arsenal.html')
-def arsenal():
-    return render_template('arsenal.html')
-
-@app.route('/personajes.html')
-def personajes():
-    return render_template('personajes.html')
-
 @app.route('/soundtracks.html')
 def soundtracks():
-    return render_template('soundtracks.html')
+    return render_template('soundtracks.html', soundtracks=lista_soundtracks)
+
+@app.route('/arsenal.html')
+def arsenal(): return render_template('arsenal.html')
+
+@app.route('/personajes.html')
+def personajes(): return render_template('personajes.html')
 
 @app.route('/galeria.html')
-def galeria():
-    return render_template('galeria.html')
+def galeria(): return render_template('galeria.html')
 
 @app.route('/registro_gow.html')
-def registro():
-    return render_template('registro_gow.html')
+def registro(): return render_template('registro_gow.html')
 
 @app.route('/noticias.html')
-def noticias():
-    return render_template('noticias.html')
+def noticias(): return render_template('noticias.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
