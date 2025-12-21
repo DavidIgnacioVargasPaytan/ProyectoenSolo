@@ -46,7 +46,8 @@ def soundtracks():
 
 @app.route('/arsenal.html')
 def arsenal():
-    return render_template('arsenal.html')
+    data_arsenal = cargar_datos('arsenal.json')
+    return render_template('arsenal.html', arsenal=data_arsenal)
 
 @app.route('/personajes.html')
 def personajes():
