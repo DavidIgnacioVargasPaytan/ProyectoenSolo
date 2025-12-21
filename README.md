@@ -17,5 +17,7 @@ Este proyecto ha sido desarrollado implementando una arquitectura Full-Stack con
 
 ---
 **Autor:** David Ignacio Vargas Paytan  
+
 **Ingeniero a Cargo del Curso:** Marco Aedo Lopez
+
 **Curso:** Introduccion al Desarrollo Web
