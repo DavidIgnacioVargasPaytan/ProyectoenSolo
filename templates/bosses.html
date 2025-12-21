@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosses Épicos de God of War</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagenes/index/favicon.png') }}">
+    <meta name="description" content="El portal definitivo de God of War. Explora la saga griega y nórdica, conoce a los personajes, escucha la banda sonora y únete a la comunidad.">
+    <meta name="keywords" content="God of War, Kratos, Ragnarok, Atreus, Saga Griega, Saga Nórdica, Playstation, Videojuegos">
+    <meta name="author" content="David Ignacio Vargas Paytan">
+</head>
+<body>
+    
+    <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">☰</button>
+
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-brand">
+            <div class="omega-icon">Ω</div>
+            <h2>GOD OF WAR</h2>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="{{ url_for('index') }}"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li><a href="{{ url_for('arsenal') }}"><i class="fa-solid fa-khanda"></i> Arsenal</a></li>
+            <li><a href="{{ url_for('personajes') }}"><i class="fa-solid fa-users"></i> Personajes</a></li>
+            <li><a href="{{ url_for('bosses') }}" class="active"><i class="fa-solid fa-skull"></i> Bosses Épicos</a></li>
+            <li><a href="{{ url_for('soundtracks') }}"><i class="fa-solid fa-music"></i> Banda Sonora</a></li>
+            <li><a href="{{ url_for('galeria') }}"><i class="fa-solid fa-image"></i> Galería</a></li>
+            <li><a href="{{ url_for('registro') }}"><i class="fa-solid fa-user-plus"></i> Registro</a></li>
+            <li><a href="{{ url_for('noticias') }}"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
+            <li><a href="https://www.playstation.com/es-pe/god-of-war/" target="_blank" class="external-link"><i class="fa-brands fa-playstation"></i> Juegos</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <p>© 2025 GOW Project</p>
+        </div>
+    </nav>
+
+    <header class="top-header">
+        <h1>BOSSES ÉPICOS</h1>
+    </header>
+
+    <main>
+        
+        <section class="intro-section">
+            <h2><i class="fa-solid fa-dragon"></i> Los Enemigos Más Legendarios</h2>
+            <p>Desde titanes colosales hasta dioses vengadores. Aquí verás el bestiario completo (paginado de 3 en 3).</p>
+        </section>
+
+        <section id="bosses-list" class="boss-zigzag-section">
+            
+            <div class="zigzag-container">
+
+                {% set ns = namespace(last_saga=None) %}
+
+                {% for boss in bosses %}
+                    
+                    {% if boss.saga != ns.last_saga %}
+                        
+                        <div class="saga-separator">
+                            {% if boss.saga == 'Griega' %}
+                                <h2 class="greek-style"><i class="fa-solid fa-landmark"></i> Saga Griega</h2>
+                            {% else %}
+                                <h2 class="norse-style"><i class="fa-regular fa-snowflake"></i> Saga Nórdica</h2>
+                            {% endif %}
+                        </div>
+
+                        {% set ns.last_saga = boss.saga %}
+                    {% endif %}
+
+                    <article class="boss-feature">
+                        <div class="boss-visual">
+                            <img src="{{ url_for('static', filename='imagenes/' + boss.img) }}" alt="{{ boss.nombre }}">
+                        </div>
+                        <div class="boss-data">
+                            <h3>{{ boss.nombre }}</h3>
+                            <div class="boss-meta">
+                                <span class="boss-game">{{ boss.juego }}</span>
+                                <span class="boss-difficulty {{ boss.diff_class }}">{{ boss.estrellas }}</span>
+                            </div>
+                            <p><strong>Tipo:</strong> {{ boss.tipo }}</p>
+                            <p><strong>Contexto:</strong> {{ boss.contexto }}</p>
+                        </div>
+                    </article>
+
+                {% endfor %}
+
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 20px; margin-top: 4rem; margin-bottom: 2rem;">
+                
+                {% if has_prev %}
+                    <a href="{{ url_for('bosses', page=page-1) }}" class="cta-button" style="padding: 10px 20px;">
+                        <i class="fa-solid fa-arrow-left"></i> Anterior
+                    </a>
+                {% else %}
+                    <button class="cta-button" style="opacity: 0.5; cursor: not-allowed; padding: 10px 20px;" disabled>
+                        <i class="fa-solid fa-arrow-left"></i> Anterior
+                    </button>
+                {% endif %}
+
+                <span style="align-self: center; font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.2rem;">
+                    Página {{ page }}
+                </span>
+
+                {% if has_next %}
+                    <a href="{{ url_for('bosses', page=page+1) }}" class="cta-button" style="padding: 10px 20px;">
+                        Siguiente <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                {% else %}
+                    <button class="cta-button" style="opacity: 0.5; cursor: not-allowed; padding: 10px 20px;" disabled>
+                        Siguiente <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                {% endif %}
+
+            </div>
+        </section>
+
+        <section id="boss-tips">
+            <h2><i class="fa-solid fa-lightbulb"></i> Tips para Derrotar Jefes</h2>
+            <div class="tips-grid">
+                <article class="tip-card">
+                    <h3><i class="fa-solid fa-shield-halved"></i> Aprende los Patrones</h3>
+                    <p>La paciencia es clave. No ataques a lo loco; observa, esquiva y haz parry.</p>
+                </article>
+                <article class="tip-card">
+                    <h3><i class="fa-solid fa-arrow-up-from-bracket"></i> Mejora tu Equipo</h3>
+                    <p>Visita a Brok y Sindri. Un nivel bajo de equipo hace que los jefes sean esponjas de daño.</p>
+                </article>
+                <article class="tip-card">
+                    <h3><i class="fa-solid fa-shuffle"></i> Cambia de Arma</h3>
+                    <p>Usa Fuego contra enemigos de Hielo y viceversa. Alterna armas para maximizar daño.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="boss-ranking" class="ranking-section">
+            <h2><i class="fa-solid fa-trophy"></i> El Panteón de la Dificultad</h2>
+            <p style="text-align: center; margin-bottom: 4rem;">Los 5 desafíos definitivos de la saga.</p>
+            <div class="podium-container">
+                <div class="podium-step rank-4">
+                    <div class="boss-avatar">
+                        <img src="{{ url_for('static', filename='imagenes/bosses/ZEUS.png') }}" alt="Zeus">
+                        <div class="medal iron">4</div>
+                    </div>
+                    <div class="step-block">
+                        <h3>Zeus</h3>
+                        <small>GOW III</small>
+                    </div>
+                </div>
+                <div class="podium-step rank-2">
+                    <div class="boss-avatar">
+                        <img src="{{ url_for('static', filename='imagenes/bosses/gna.jpg') }}" alt="Gná">
+                        <div class="medal silver">2</div>
+                    </div>
+                    <div class="step-block">
+                        <h3>Gná</h3>
+                        <span>Reina</span>
+                        <small>Ragnarök</small>
+                    </div>
+                </div>
+                <div class="podium-step rank-1">
+                    <div class="crown-icon"><i class="fa-solid fa-crown"></i></div>
+                    <div class="boss-avatar">
+                        <img src="{{ url_for('static', filename='imagenes/bosses/sigrun.jpg') }}" alt="Sigrun">
+                        <div class="medal gold">1</div>
+                    </div>
+                    <div class="step-block">
+                        <h3>Sigrun</h3>
+                        <span>Suprema</span>
+                        <small>GOW 2018</small>
+                    </div>
+                </div>
+                <div class="podium-step rank-3">
+                    <div class="boss-avatar">
+                        <img src="{{ url_for('static', filename='imagenes/bosses/thor.png') }}" alt="Thor">
+                        <div class="medal bronze">3</div>
+                    </div>
+                    <div class="step-block">
+                        <h3>Thor</h3>
+                        <span>Aesir</span>
+                        <small>Ragnarök</small>
+                    </div>
+                </div>
+                <div class="podium-step rank-5">
+                    <div class="boss-avatar">
+                        <img src="{{ url_for('static', filename='imagenes/bosses/baldur.png') }}" alt="Baldur">
+                        <div class="medal stone">5</div>
+                    </div>
+                    <div class="step-block">
+                        <h3>Baldur</h3>
+                        <small>GOW 2018</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Proyecto Personal GOW - David Ignacio Vargas Paytan</p>
+        <address>Contacto: <a href="mailto:dvargasp@unsa.edu.pe" style="color: var(--gold);">dvargasp@unsa.edu.pe</a></address>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">God of War es una marca registrada de Sony Interactive Entertainment LLC.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

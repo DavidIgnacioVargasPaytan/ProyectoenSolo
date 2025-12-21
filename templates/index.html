@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="static/styles.css">
-    <link rel="icon" type="image/png" href="static/imagenes/index/favicon.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagenes/index/favicon.png') }}">
     <meta name="description" content="El portal definitivo de God of War. Explora la saga griega y nórdica, conoce a los personajes, escucha la banda sonora y únete a la comunidad.">
     <meta name="keywords" content="God of War, Kratos, Ragnarok, Atreus, Saga Griega, Saga Nórdica, Playstation, Videojuegos">
     <meta name="author" content="David Ignacio Vargas Paytan">
@@ -25,14 +25,14 @@
         </div>
         
         <ul class="nav-links">
-            <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Inicio</a></li>
-            <li><a href="arsenal.html"><i class="fa-solid fa-khanda"></i> Arsenal</a></li>
-            <li><a href="personajes.html"><i class="fa-solid fa-users"></i> Personajes</a></li>
-            <li><a href="bosses.html"><i class="fa-solid fa-skull"></i> Bosses Épicos</a></li>
-            <li><a href="soundtracks.html"><i class="fa-solid fa-music"></i> Banda Sonora</a></li>
-            <li><a href="galeria.html"><i class="fa-solid fa-image"></i> Galería</a></li>
-            <li><a href="registro_gow.html"><i class="fa-solid fa-user-plus"></i> Registro</a></li>
-            <li><a href="noticias.html"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
+            <li><a href="{{ url_for('index') }}" class="active"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li><a href="{{ url_for('arsenal') }}"><i class="fa-solid fa-khanda"></i> Arsenal</a></li>
+            <li><a href="{{ url_for('personajes') }}"><i class="fa-solid fa-users"></i> Personajes</a></li>
+            <li><a href="{{ url_for('bosses') }}"><i class="fa-solid fa-skull"></i> Bosses Épicos</a></li>
+            <li><a href="{{ url_for('soundtracks') }}"><i class="fa-solid fa-music"></i> Banda Sonora</a></li>
+            <li><a href="{{ url_for('galeria') }}"><i class="fa-solid fa-image"></i> Galería</a></li>
+            <li><a href="{{ url_for('registro') }}"><i class="fa-solid fa-user-plus"></i> Registro</a></li>
+            <li><a href="{{ url_for('noticias') }}"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
             <li><a href="https://www.playstation.com/es-pe/god-of-war/" target="_blank" class="external-link"><i class="fa-brands fa-playstation"></i> Juegos</a></li>
         </ul>
 
@@ -142,6 +142,6 @@
         <p style="margin-top: 1rem; font-size: 0.8rem;">God of War es una marca registrada de Sony Interactive Entertainment LLC.</p>
     </footer>
 
-    <script src="static/js/script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

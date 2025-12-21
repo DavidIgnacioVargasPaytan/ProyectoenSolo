@@ -334,7 +334,6 @@ footer {
 .hero-section {
     height: 100vh;
     width: 100%;
-    /* Corrección de ruta: Eliminada la barra inicial y apuntando a imagenes relativa a css */
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('imagenes/index/kratos-trono.jpg');
     background-size: cover;
     background-position: 50% 25%;
@@ -436,7 +435,6 @@ footer {
 }
 
 .greek-saga {
-    /* Corrección de ruta */
     background-image: url('imagenes/index/griega.jpg');
     background-size: contain;
     background-position: center;
@@ -445,7 +443,6 @@ footer {
 }
 
 .norse-saga {
-    /* Corrección de ruta */
     background-image: url('imagenes/index/nordica.jpg');
     background-size: contain;
     background-position: center;
@@ -1238,7 +1235,6 @@ footer {
 }
 
 .news-hero {
-    /* Corrección de ruta */
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url('imagenes/index/nordica.jpg');
     background-size: cover;
     background-position: center;
@@ -1533,4 +1529,33 @@ footer {
     .news-hero h3 {
         font-size: 1.8rem;
     }
+}
+
+.saga-separator {
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--gold);
+    animation: fadeIn 1s ease;
+}
+
+.saga-separator h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    border: none;      
+    padding: 0;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+}
+
+.greek-style {
+    color: #ff5252; 
+}
+
+.norse-style {
+    color: #4da6ff; 
+}
+
+.saga-separator + .boss-feature {
+    margin-top: 1rem;
 }
