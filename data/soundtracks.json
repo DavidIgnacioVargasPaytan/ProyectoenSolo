@@ -1,0 +1,47 @@
+[
+    {
+        "title": "God of War: Ascension",
+        "cover": "imagenes/portadas/gow-ascencion.jpg", 
+        "spotifyUrl": "https://open.spotify.com/intl-es/album/5HbN8AlVNXadPJglFJI8EC?si=274e1c20feef4d2f" 
+    },
+    {
+        "title": "God of War: Chains of Olympus",
+        "cover": "imagenes/portadas/gow-chains.jpg", 
+        "spotifyUrl": "https://www.youtube.com/watch?v=r7YcBW2uwEA&list=PL1n4ES3x6XXbjurg1rZUbX0yi6GGHOoAk&pp=0gcJCbAEOCosWNin" 
+    },
+    {
+        "title": "God of War (2005)",
+        "cover": "imagenes/portadas/gowI.jpg", 
+        "spotifyUrl": "https://open.spotify.com/intl-es/album/4tZGORVhBzO0Kzj5oaOOMn?si=07df4a651c1d42df"
+    },
+    {
+        "title": "God of War: Ghost of Sparta",
+        "cover": "imagenes/portadas/gow-gos.jpg",
+        "spotifyUrl": "https://open.spotify.com/intl-es/album/5yN2kJh22LtZVn55wVMH7h?si=e8e034b48c03400b"
+    },
+    {
+        "title": "God of War II",
+        "cover": "imagenes/portadas/gowII.jpg",
+        "spotifyUrl": "https://open.spotify.com/intl-es/album/17K3q2htUlMsSflM3XZxlw?si=d4c8a7f1bed143cc"
+    },
+    {
+        "title": "God of War III",
+        "cover": "imagenes/portadas/gow3.jpg", 
+        "spotifyUrl": "https://open.spotify.com/intl-es/album/1w9j0DZdI7oa6Fz0lPtHDC?si=7ca78e69fe6041b0"
+    },
+    {
+        "title": "God of War (2018)",
+        "cover": "imagenes/portadas/gow4.jpg",
+        "spotifyUrl": "https://open.spotify.com/intl-es/album/3AieuV7WztobSMYG86Hdez?si=43c51777fd2f4b06"
+    },
+    {
+        "title": "God of War Ragnarök",
+        "cover": "imagenes/portadas/gow-ragnarok.jpg",
+        "spotifyUrl": "https://open.spotify.com/intl-es/album/7LmeRZOi905AochW9J9FAA?si=ea13df712d4e4e93"
+    },
+    {
+        "title": "GoW Ragnarök: Valhalla",
+        "cover": "imagenes/portadas/gow-valhalla.jpg",
+        "spotifyUrl": "https://open.spotify.com/intl-es/album/2j8WG0EzaUgsmSy2iPIwJZ?si=ce538c8648424826"
+    }
+]

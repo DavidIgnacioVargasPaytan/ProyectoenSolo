@@ -1,0 +1,100 @@
+{
+    "principal": [
+        {
+            "nombre": "Hacha Leviatán",
+            "img": "imagenes/hacha-leviatan.png",
+            "saga": "Saga Nórdica",
+            "desc": "Forjada por los hermanos Huldra para Laufey. Infundida con hielo, es el contrapeso perfecto para el Mjolnir. Puede ser lanzada y llamada de vuelta al instante.",
+            "stats": [
+                {"icono": "fa-regular fa-snowflake", "texto": "Hielo"},
+                {"icono": "fa-solid fa-hammer", "texto": "Brok y Sindri"}
+            ]
+        },
+        {
+            "nombre": "Espadas del Caos",
+            "img": "imagenes/espada-del-caos-6036405_1920.png",
+            "saga": "Saga Griega / Nórdica",
+            "desc": "Las armas infames de Kratos. Hojas encadenadas forjadas en el Hades por Ares. Infundidas con fuego primordial, ideales para controlar multitudes.",
+            "stats": [
+                {"icono": "fa-solid fa-fire", "texto": "Fuego"},
+                {"icono": "fa-solid fa-link", "texto": "Ares"}
+            ]
+        },
+        {
+            "nombre": "Lanza de Draupnir",
+            "img": "imagenes/lanza-draupnir.png",
+            "saga": "Saga Nórdica (Ragnarök)",
+            "desc": "La primera arma propia de Kratos como General. Forjada del anillo Draupnir, se replica infinitamente y detona con fuerza sónica.",
+            "stats": [
+                {"icono": "fa-solid fa-wind", "texto": "Viento"},
+                {"icono": "fa-solid fa-water", "texto": "Dama de la Forja"}
+            ]
+        },
+        {
+            "nombre": "Escudo Guardián",
+            "img": "imagenes/escudo-guardian.png",
+            "saga": "Saga Nórdica",
+            "desc": "Regalo de Faye. Un escudo retráctil capaz de absorber golpes de dioses y devolver la energía cinética con fuerza brutal. Es la defensa definitiva de Kratos.",
+            "stats": [
+                {"icono": "fa-solid fa-shield-halved", "texto": "Defensa"},
+                {"icono": "fa-solid fa-tree", "texto": "Faye"}
+            ]
+        }
+    ],
+    "legado": [
+        {
+            "nombre": "Espada del Olimpo",
+            "img": "imagenes/espada-del-olimpo-6038769_1920.png",
+            "saga": "Saga Griega",
+            "desc": "La hoja creada por Zeus para ganar la Gran Guerra. Capaz de drenar poderes divinos y matar dioses."
+        },
+        {
+            "nombre": "Cestus de Nemea",
+            "img": "imagenes/nemean-cestus-6034867_1920.png",
+            "saga": "Saga Griega",
+            "desc": "Guanteletes con forma de cabeza de león robados a Hércules. Generaban ondas de choque brutales."
+        },
+        {
+            "nombre": "Garras de Hades",
+            "img": "imagenes/hades-claws.png",
+            "saga": "Saga Griega",
+            "desc": "Similares a las espadas del caos, pero capaces de invocar almas de los muertos para luchar."
+        },
+        {
+            "nombre": "Espada de Artemisa",
+            "img": "imagenes/espada-de-artemisa.png",
+            "saga": "God of War I",
+            "desc": "Una gran hoja curva entregada por la diosa de la caza. Lenta pero capaz de cortar enemigos por la mitad."
+        },
+        {
+            "nombre": "Arco de Apolo",
+            "img": "imagenes/Bow of Apollo(1).png",
+            "saga": "Saga Griega",
+            "desc": "Arco capaz de disparar flechas de fuego rápido. Esencial para quemar obstáculos a distancia."
+        },
+        {
+            "nombre": "Armas de Esparta",
+            "img": "imagenes/armas-de-esparta.png",
+            "saga": "Ghost of Sparta",
+            "desc": "Lanza y escudo del general espartano. Permiten combate a distancia y defensa impenetrable."
+        },
+        {
+            "nombre": "Martillo Bárbaro",
+            "img": "imagenes/martillo-barbaro.png",
+            "saga": "God of War II",
+            "desc": "Arma masiva arrebatada al Rey Bárbaro. Lenta, pero invoca almas malditas y aplasta todo."
+        },
+        {
+            "nombre": "Vellocino de Oro",
+            "img": "imagenes/vellocino.png",
+            "saga": "God of War II",
+            "desc": "Reliquia dorada capaz de reflejar ataques enemigos y devolver proyectiles con mayor fuerza."
+        },
+        {
+            "nombre": "Amuleto de Uroboros",
+            "img": "imagenes/uroboros.png",
+            "saga": "Ascension",
+            "desc": "Reliquia capaz de manipular el tiempo, reconstruyendo o deteriorando objetos y enemigos."
+        }
+    ]
+}
