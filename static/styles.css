@@ -334,16 +334,18 @@ footer {
 .hero-section {
     height: 100vh;
     width: 100%;
+    /* Corrección de ruta: Eliminada la barra inicial y apuntando a imagenes relativa a css */
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('imagenes/index/kratos-trono.jpg');
     background-size: cover;
-    background-position: center top;
-    background-attachment: fixed;
+    background-position: 50% 25%;
+    background-attachment: scroll;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-bottom: 0;
     border: none;
+    position: relative;
 }
 
 .hero-content {
@@ -434,6 +436,7 @@ footer {
 }
 
 .greek-saga {
+    /* Corrección de ruta */
     background-image: url('imagenes/index/griega.jpg');
     background-size: contain;
     background-position: center;
@@ -442,6 +445,7 @@ footer {
 }
 
 .norse-saga {
+    /* Corrección de ruta */
     background-image: url('imagenes/index/nordica.jpg');
     background-size: contain;
     background-position: center;
@@ -1234,6 +1238,7 @@ footer {
 }
 
 .news-hero {
+    /* Corrección de ruta */
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url('imagenes/index/nordica.jpg');
     background-size: cover;
     background-position: center;
