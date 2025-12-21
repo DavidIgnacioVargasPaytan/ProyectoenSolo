@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagenes/index/favicon.png') }}">
-    <meta name="description" content="El portal definitivo de God of War. Explora la saga griega y nórdica, conoce a los personajes, escucha la banda sonora y únete a la comunidad.">
-    <meta name="keywords" content="God of War, Kratos, Ragnarok, Atreus, Saga Griega, Saga Nórdica, Playstation, Videojuegos">
+    <meta name="description" content="El portal definitivo de God of War. Únete a la comunidad de guerreros.">
+    <meta name="keywords" content="God of War, Registro, Comunidad, Kratos">
     <meta name="author" content="David Ignacio Vargas Paytan">
 </head>
 <body>
@@ -34,6 +34,25 @@
             <li><a href="{{ url_for('registro') }}" class="active"><i class="fa-solid fa-user-plus"></i> Registro</a></li>
             <li><a href="{{ url_for('noticias') }}"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
             <li><a href="https://www.playstation.com/es-pe/god-of-war/" target="_blank" class="external-link"><i class="fa-brands fa-playstation"></i> Juegos</a></li>
+
+            <li id="loginLi">
+                <button id="openLoginBtn" class="btn-login-trigger">
+                    <i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión
+                </button>
+            </li>
+
+            <div id="userProfilePanel" class="user-profile-panel" style="display: none;">
+                <div class="user-info">
+                    <i class="fa-solid fa-user-shield omega-avatar"></i>
+                    <div>
+                        <span class="greeting">Saludos,</span>
+                        <span id="userNameDisplay" class="username">Kratos</span>
+                    </div>
+                </div>
+                <button id="logoutBtn" class="btn-logout">
+                    <i class="fa-solid fa-power-off"></i> Cerrar Sesión
+                </button>
+            </div>
         </ul>
 
         <div class="sidebar-footer">
@@ -54,30 +73,30 @@
                 
                 <div class="input-group">
                     <label for="username">Usuario</label>
-                    <input type="text" id="username" placeholder="Kratos_Spartan">
+                    <input type="text" id="username" placeholder="Kratos_Spartan" required>
                     <span class="error-msg" id="usernameError"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="email_reg">Email</label>
-                    <input type="email" id="email_reg" placeholder="tu@email.com">
+                    <input type="email" id="email_reg" placeholder="tu@email.com" required>
                     <span class="error-msg" id="emailError"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="password_reg">Contraseña</label>
-                    <input type="password" id="password_reg" placeholder="••••••••">
+                    <input type="password" id="password_reg" placeholder="••••••••" required>
                     <span class="error-msg" id="passwordError"></span>
                 </div>
 
                 <div class="input-group">
                     <label for="password_confirm">Confirmar</label>
-                    <input type="password" id="password_confirm" placeholder="••••••••">
+                    <input type="password" id="password_confirm" placeholder="••••••••" required>
                     <span class="error-msg" id="confirmError"></span>
                 </div>
 
                 <div class="checkbox-group">
-                    <input type="checkbox" id="terminos">
+                    <input type="checkbox" id="terminos" required>
                     <label for="terminos">Acepto los términos de servicio</label>
                 </div>
 
@@ -94,6 +113,27 @@
         <p style="margin-top: 1rem; font-size: 0.8rem;">God of War es una marca registrada de Sony Interactive Entertainment LLC.</p>
     </footer>
 
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 style="text-align: center; color: var(--text-dark);">Bienvenido Guerrero</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 20px;">Ingresa tus credenciales</p>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email" style="color: var(--text-dark);">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="kratos@esparta.com" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password" style="color: var(--text-dark);">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+                
+                <button type="submit" class="btn-submit">Ingresar</button>
+            </form>
+        </div>
+    </div>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script src="{{ url_for('static', filename='js/registro.js') }}"></script>
 </body>

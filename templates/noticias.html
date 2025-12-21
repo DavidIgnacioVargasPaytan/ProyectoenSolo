@@ -34,6 +34,25 @@
             <li><a href="{{ url_for('registro') }}"><i class="fa-solid fa-user-plus"></i> Registro</a></li>
             <li><a href="{{ url_for('noticias') }}" class="active"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
             <li><a href="https://www.playstation.com/es-pe/god-of-war/" target="_blank" class="external-link"><i class="fa-brands fa-playstation"></i> Juegos</a></li>
+
+            <li id="loginLi">
+                <button id="openLoginBtn" class="btn-login-trigger">
+                    <i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión
+                </button>
+            </li>
+
+            <div id="userProfilePanel" class="user-profile-panel" style="display: none;">
+                <div class="user-info">
+                    <i class="fa-solid fa-user-shield omega-avatar"></i>
+                    <div>
+                        <span class="greeting">Saludos,</span>
+                        <span id="userNameDisplay" class="username">Kratos</span>
+                    </div>
+                </div>
+                <button id="logoutBtn" class="btn-logout">
+                    <i class="fa-solid fa-power-off"></i> Cerrar Sesión
+                </button>
+            </div>
         </ul>
 
         <div class="sidebar-footer">
@@ -67,34 +86,27 @@
         <div class="news-layout">
             
             <div class="news-feed">
-                <h3 class="section-label">Últimos Artículos</h3>
+                <h3 class="section-label">Últimos Artículos (Cargados desde SQL)</h3>
 
-                <article class="news-card">
-                    <div class="news-icon-wrapper"><i class="fa-solid fa-film"></i></div>
-                    <div class="news-content">
-                        <h4>Serie de Amazon Prime Video</h4>
-                        <p class="news-date"><time datetime="2024-10-20">20 Oct, 2024</time></p>
-                        <p>La adaptación live-action confirma su fase de producción para 2025. Se espera que explore tanto la era griega como la nórdica, manteniendo la fidelidad narrativa.</p>
-                    </div>
-                </article>
+                {% for noticia in noticias %}
+                    
+                    {% if noticia.tipo != 'destacado' %}
+                    <article class="news-card">
+                        <div class="news-icon-wrapper"><i class="{{ noticia.icono }}"></i></div>
+                        <div class="news-content">
+                            <h4>{{ noticia.titulo }}</h4>
+                            <p class="news-date"><i class="fa-regular fa-calendar"></i> <time>{{ noticia.fecha }}</time></p>
+                            <p>{{ noticia.contenido }}</p>
+                        </div>
+                    </article>
+                    {% endif %}
 
-                <article class="news-card">
-                    <div class="news-icon-wrapper"><i class="fa-solid fa-trophy"></i></div>
-                    <div class="news-content">
-                        <h4>Hito Histórico: 15 Millones</h4>
-                        <p class="news-date"><time datetime="2024-09-15">15 Sep, 2024</time></p>
-                        <p>Ragnarök supera las 15 millones de copias vendidas. La comunidad de PC celebra el rendimiento optimizado y las opciones gráficas ultra.</p>
-                    </div>
-                </article>
+                {% endfor %}
+                
+                {% if noticias|length <= 1 %}
+                    <p style="text-align:center; padding: 2rem; color: #888;">No hay más noticias en los pergaminos antiguos.</p>
+                {% endif %}
 
-                <article class="news-card">
-                    <div class="news-icon-wrapper"><i class="fa-solid fa-book-journal-whills"></i></div>
-                    <div class="news-content">
-                        <h4>Novela Gráfica Anunciada</h4>
-                        <p class="news-date"><time datetime="2024-08-30">30 Ago, 2024</time></p>
-                        <p>Dark Horse Comics lanzará una historia inédita que conecta los eventos de 2018 con el Fimbulvetr. Llegará en Abril de 2025.</p>
-                    </div>
-                </article>
             </div>
 
             <aside class="news-sidebar">
@@ -148,6 +160,27 @@
         <p style="margin-top: 1rem; font-size: 0.8rem;">God of War es una marca registrada de Sony Interactive Entertainment LLC.</p>
     </footer>
 
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 style="text-align: center; color: var(--text-dark);">Bienvenido Guerrero</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 20px;">Ingresa tus credenciales</p>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email" style="color: var(--text-dark);">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="kratos@esparta.com" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password" style="color: var(--text-dark);">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+                
+                <button type="submit" class="btn-submit">Ingresar</button>
+            </form>
+        </div>
+    </div>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <script src="{{ url_for('static', filename='js/noticias.js') }}"></script>
 </body>
