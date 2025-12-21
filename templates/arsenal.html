@@ -49,10 +49,34 @@
         <section class="intro-arsenal">
             <h2><i class="fa-solid fa-hammer"></i> El Arsenal del Fantasma de Esparta</h2>
             <p>Herramientas de destrucción forjadas por dioses, titanes y enanos. Desde las tierras nórdicas hasta las ruinas del Olimpo.</p>
+            
+            <div class="search-container">
+                <form action="{{ url_for('arsenal') }}" method="GET" class="search-form">
+                    <input type="text" name="q" class="search-input" 
+                           placeholder="Buscar arma (ej. Espadas, Hacha...)"
+                           value="{{ busqueda if busqueda else '' }}">
+                    <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    
+                    {% if busqueda %}
+                    <a href="{{ url_for('arsenal') }}" class="search-btn" style="background: #333; display: flex; align-items: center; text-decoration: none;">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                    {% endif %}
+                </form>
+            </div>
         </section>
 
+        {% if not arsenal.principal and not arsenal.legado %}
+            <div class="no-results">
+                <i class="fa-solid fa-ghost"></i>
+                <h3>No se encontraron armas</h3>
+                <p>Parece que esa arma no existe en los Nueve Reinos ni en el Olimpo.</p>
+                <a href="{{ url_for('arsenal') }}" style="color: var(--gold);">Ver todo el arsenal</a>
+            </div>
+        {% endif %}
+
+        {% if arsenal.principal %}
         <div class="arsenal-container">
-            
             {% for arma in arsenal.principal %}
             <article class="weapon-feature">
                 <div class="weapon-visual">
@@ -62,7 +86,6 @@
                     <h3>{{ arma.nombre }}</h3>
                     <span class="weapon-saga">{{ arma.saga }}</span>
                     <p>{{ arma.desc }}</p>
-                    
                     <ul class="weapon-stats">
                         {% for stat in arma.stats %}
                         <li><i class="{{ stat.icono }}"></i> {{ stat.texto }}</li>
@@ -71,15 +94,15 @@
                 </div>
             </article>
             {% endfor %}
-
         </div>
+        {% endif %}
 
+        {% if arsenal.legado %}
         <section id="armas-perdidas" class="legacy-arsenal">
-            <h2><i class="fa-solid fa-landmark"></i> Reliquias del Pasado y Objetos Perdidos</h2>
-            <p>Armas legendarias que Kratos usó en su cruzada contra el Olimpo y que quedaron atrás.</p>
+            {% if arsenal.principal %} <h2><i class="fa-solid fa-landmark"></i> Reliquias del Pasado</h2>
+            {% endif %}
             
             <div class="weapons-grid">
-                
                 {% for arma in arsenal.legado %}
                 <article class="weapon-card">
                     <div class="card-image-wrapper">
@@ -90,9 +113,9 @@
                     <p>{{ arma.desc }}</p>
                 </article>
                 {% endfor %}
-
             </div>
         </section>
+        {% endif %}
     </main>
 
     <footer>

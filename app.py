@@ -46,8 +46,31 @@ def soundtracks():
 
 @app.route('/arsenal.html')
 def arsenal():
-    data_arsenal = cargar_datos('arsenal.json')
-    return render_template('arsenal.html', arsenal=data_arsenal)
+    data = cargar_datos('arsenal.json')
+    
+    query = request.args.get('q') 
+    
+    if query:
+        query = query.lower()
+        
+        filtered_principal = [
+            arma for arma in data['principal'] 
+            if query in arma['nombre'].lower() or query in arma['desc'].lower()
+        ]
+        
+        filtered_legado = [
+            arma for arma in data['legado'] 
+            if query in arma['nombre'].lower() or query in arma['desc'].lower()
+        ]
+        
+        resultados = {
+            "principal": filtered_principal,
+            "legado": filtered_legado
+        }
+        
+        return render_template('arsenal.html', arsenal=resultados, busqueda=query)
+    
+    return render_template('arsenal.html', arsenal=data)
 
 @app.route('/personajes.html')
 def personajes():
